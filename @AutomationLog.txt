@@ -1,0 +1,6 @@
+Can not load dll.
+Functionalities related to Bitmap are not available.
+You may need to install Microsoft Visual C++ 2015 Redistributable Package.
+Can not load dll.
+Functionalities related to Bitmap are not available.
+You may need to install Microsoft Visual C++ 2015 Redistributable Package.
