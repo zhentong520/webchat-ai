@@ -1,0 +1,53 @@
+{
+  "$schema": "./ai-config.schema.json",
+  "_comment": "复制本文件为 ai-config.json 并填写 api_key。供 WebChat AI 及本机其他应用共用。",
+  "_fields": {
+    "base_url": "OpenAI 兼容 API 根地址，不要带 /chat/completions",
+    "model": "模型 ID，与厂商控制台一致",
+    "api_key": "API 密钥，留空则本段配置不生效",
+    "api_format": "固定填 completions（OpenAI 兼容对话接口）",
+    "active_profile": "留空=用下面顶层配置；填 glm/deepseek 等=切换到 profiles 里对应项"
+  },
+  "_description": "默认配置：MiniMax，适合中文微信对话，本项目实测使用",
+  "base_url": "https://api.minimaxi.com/v1",
+  "model": "MiniMax-M2.5",
+  "api_key": "",
+  "api_format": "completions",
+  "profiles": {
+    "minimax": {
+      "_description": "MiniMax 官方 API。注册：https://platform.minimaxi.com — 中文对话质量高，本项目默认推荐",
+      "base_url": "https://api.minimaxi.com/v1",
+      "model": "MiniMax-M2.5",
+      "api_key": "",
+      "api_format": "completions"
+    },
+    "glm": {
+      "_description": "智谱 GLM。注册：https://open.bigmodel.cn — 国内访问快，glm-4-flash 便宜适合高频自动回复",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4",
+      "model": "glm-4-flash",
+      "api_key": "",
+      "api_format": "completions"
+    },
+    "deepseek": {
+      "_description": "DeepSeek。注册：https://platform.deepseek.com — 性价比高，推理与对话均衡",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "api_key": "",
+      "api_format": "completions"
+    },
+    "qwen": {
+      "_description": "通义千问（阿里云 DashScope）。注册：https://dashscope.aliyun.com — 需用 compatible-mode 地址",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model": "qwen-plus",
+      "api_key": "",
+      "api_format": "completions"
+    }
+  },
+  "active_profile": "",
+  "vision": {
+    "_description": "图片识别专用。留空 api_key 则自动用本机 MiniMax Key + MiniMax-M3",
+    "base_url": "https://api.minimaxi.com/v1",
+    "model": "MiniMax-M3",
+    "api_key": ""
+  }
+}

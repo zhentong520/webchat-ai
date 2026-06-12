@@ -1,0 +1,6 @@
+{
+  "_comment": "一键启动默认监听对象，按需修改 private_contacts / groups",
+  "interval": 15,
+  "private_contacts": ["Air"],
+  "groups": ["测试群1"]
+}

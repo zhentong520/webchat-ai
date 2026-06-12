@@ -1,0 +1,11 @@
+# 含 API Key，勿提交
+config/ai-config.json
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# 状态与日志
+*.log

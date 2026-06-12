@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "wx4py": {
+      "command": "python",
+      "args": ["-m", "wx4py_mcp"],
+      "cwd": "E:/webchat-ai",
+      "env": {
+        "WX4PY_AI_BASE_URL": "https://open.bigmodel.cn/api/paas/v4",
+        "WX4PY_AI_MODEL": "glm-4-flash",
+        "WX4PY_AI_API_KEY": "your-zhipu-api-key"
+      }
+    }
+  }
+}

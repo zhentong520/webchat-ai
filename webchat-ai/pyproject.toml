@@ -1,0 +1,23 @@
+[project]
+name = "wx4py-mcp"
+version = "0.2.1"
+description = "WeChat automation MCP: private/group chat, AI polling listener, voice/video calls"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "wx4py>=0.2.1",
+    "mcp>=1.0.0",
+    "Pillow>=9.0.0",
+]
+
+[project.scripts]
+wx4py-mcp = "wx4py_mcp.server:main"
+wx4py-listen = "wx4py_mcp.listen_cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["wx4py_mcp*"]
